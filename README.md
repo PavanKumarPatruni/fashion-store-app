@@ -1,4 +1,4 @@
-# fashion-store-app
+# Fashion Store App (React, Redux, Node)
 
 <h1>Web Screens</h1>
 
