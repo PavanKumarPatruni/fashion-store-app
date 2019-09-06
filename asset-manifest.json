@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/fashion-store-app/static/css/main.487eb347.chunk.css",
-    "main.js": "/fashion-store-app/static/js/main.9442cbbf.chunk.js",
-    "main.js.map": "/fashion-store-app/static/js/main.9442cbbf.chunk.js.map",
+    "main.js": "/fashion-store-app/static/js/main.45bffe7c.chunk.js",
+    "main.js.map": "/fashion-store-app/static/js/main.45bffe7c.chunk.js.map",
     "runtime~main.js": "/fashion-store-app/static/js/runtime~main.399020c1.js",
     "runtime~main.js.map": "/fashion-store-app/static/js/runtime~main.399020c1.js.map",
     "static/js/2.977f6867.chunk.js": "/fashion-store-app/static/js/2.977f6867.chunk.js",
     "static/js/2.977f6867.chunk.js.map": "/fashion-store-app/static/js/2.977f6867.chunk.js.map",
     "index.html": "/fashion-store-app/index.html",
-    "precache-manifest.9d865c0583c4d205ee78361b9cf2cca9.js": "/fashion-store-app/precache-manifest.9d865c0583c4d205ee78361b9cf2cca9.js",
+    "precache-manifest.5916a6f0b033a7ff6a10e29cdd7a6a80.js": "/fashion-store-app/precache-manifest.5916a6f0b033a7ff6a10e29cdd7a6a80.js",
     "service-worker.js": "/fashion-store-app/service-worker.js",
     "static/css/main.487eb347.chunk.css.map": "/fashion-store-app/static/css/main.487eb347.chunk.css.map"
   }
