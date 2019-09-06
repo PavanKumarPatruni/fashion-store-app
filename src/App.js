@@ -11,7 +11,7 @@ import Cart from './components/cart';
 
 const App = ({ store }) => (
     <Provider store={store}>
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <div className="App">
           <Header />
           <Switch>

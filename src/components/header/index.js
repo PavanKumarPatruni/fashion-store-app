@@ -54,7 +54,7 @@ class Header extends Component {
     return (
         <header>
           <div className="header-wrapper">
-            <h3><Link to={'/'} >Fashion Store</Link></h3>
+            <h3><Link to={'/store'} >Fashion Store</Link></h3>
             <div className="header-options">
               <ul>
                 <li>
