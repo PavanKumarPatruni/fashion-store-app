@@ -1,0 +1,32 @@
+.wishlist {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    .wishlist-items {
+        display: flex;
+        width: 80%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+
+        @media screen and (max-width: 500px) {
+            width: 95%;
+            justify-content: center;
+        }
+
+        .wishlist-item {
+            width: 46% !important;
+            margin-left: 10px;
+
+            @media screen and (max-width: 800px) {
+                width: 44% !important;
+            }
+
+            @media screen and (max-width: 500px) {
+                margin-left: 0;
+                width: 100% !important;
+            }
+
+        }
+    }
+}
