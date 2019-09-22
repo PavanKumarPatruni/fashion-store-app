@@ -3,6 +3,9 @@
     background: white;
     margin: 5px;
     border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
 
     @media screen and (min-width: 1300px) {
         width: 24%;
@@ -14,7 +17,6 @@
 
     .pic {
         width: 100%;
-        border-radius: 5px 5px 0 0;
     }
 
     .details {
@@ -70,6 +72,11 @@
                     display: flex;
                     align-items: center;
                     justify-content: center;
+
+                    &.selected {
+                        background: #480048;
+                        color: #dedede;
+                    }
                 }
             }
         }
@@ -94,7 +101,27 @@
             font-size: 9px;
             color: #666666;
         }
+    }
 
+    .alert-size {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: #c04848f0;
+        color: white;
+        padding: 10px;
+        font-size: 10px;
+        box-sizing: border-box;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0.5s, opacity 0.5s linear;
+        
+        &.show {
+            visibility: visible;
+            opacity: 1;
+        }
     }
 
 }

@@ -46,7 +46,7 @@ class Wishlist extends Component {
     if (wishlist && wishlist.length > 0) {
       content = ( <div className="wishlist">
         <div className="wishlist-items">
-          <WishlistList wishlist={wishlist} />
+          <WishlistList wishlist={wishlist}/>
         </div>
       </div> );
     } else {

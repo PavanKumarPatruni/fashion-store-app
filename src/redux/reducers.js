@@ -13,10 +13,10 @@ let initState = {
     wishlistIds: []
 };
 
-const data = JSON.parse(localStorage.getItem('fashion-store-data'));
-if (data) {
-    initState = { cart: data.cart, cartIds: data.cartIds, wishlist: data.wishlist, wishlistIds: data.wishlistIds };
-}
+// const data = JSON.parse(localStorage.getItem('fashion-store-data'));
+// if (data) {
+//     initState = { cart: data.cart, cartIds: data.cartIds, wishlist: data.wishlist, wishlistIds: data.wishlistIds };
+// }
 
 const reducer = (state = initState, action) => {
     switch (action.type) {
@@ -25,8 +25,6 @@ const reducer = (state = initState, action) => {
             let {cart, cartIds} = state;
 
             let index = cartIds.indexOf(product.id);
-
-            console.log(index);
 
             if (index < 0) {
                 product.count = 1;
@@ -39,9 +37,7 @@ const reducer = (state = initState, action) => {
 
             state = Object.assign({}, state, { cart, cartIds });
 
-            console.log(state);
-
-            localStorage.setItem('fashion-store-data', JSON.stringify(state));
+            // localStorage.setItem('fashion-store-data', JSON.stringify(state));
 
             return state;
         }
@@ -57,7 +53,7 @@ const reducer = (state = initState, action) => {
 
             state = Object.assign({}, state, { wishlist, wishlistIds });
 
-            localStorage.setItem('fashion-store-data', JSON.stringify(state));
+            // localStorage.setItem('fashion-store-data', JSON.stringify(state));
 
             return state;
         }
@@ -74,7 +70,7 @@ const reducer = (state = initState, action) => {
 
             state = Object.assign({}, state, { cart, cartIds });
 
-            localStorage.setItem('fashion-store-data', JSON.stringify(state));
+            // localStorage.setItem('fashion-store-data', JSON.stringify(state));
 
             return state;
         }
@@ -90,7 +86,7 @@ const reducer = (state = initState, action) => {
 
             state = Object.assign({}, state, { wishlist, wishlistIds });
 
-            localStorage.setItem('fashion-store-data', JSON.stringify(state));
+            // localStorage.setItem('fashion-store-data', JSON.stringify(state));
 
             return state;
         }
@@ -105,7 +101,7 @@ const reducer = (state = initState, action) => {
 
             state = Object.assign({}, state, { cart, cartIds });
 
-            localStorage.setItem('fashion-store-data', JSON.stringify(state));
+            // localStorage.setItem('fashion-store-data', JSON.stringify(state));
 
             return state;
         }

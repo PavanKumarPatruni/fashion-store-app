@@ -5,6 +5,8 @@ import { quanityChange, removeFromCart, addToWishlist } from '../../../redux/act
 
 import './cart_item.scss';
 
+import history from '../../../components/history';
+
 class CartItem extends Component {
     
     constructor(props) {
@@ -35,12 +37,32 @@ class CartItem extends Component {
         this.props.productQuantityChange(this.state.product);
     }
 
-    addToWishlist() {
-        this.props.addProductToWishlist(this.state.product);
+    onItemClick() {
+        history.push('/item/'+this.state.product.id);
     }
 
-    removeToCart() {
+    addToWishlist(e) {
+        this.props.addProductToWishlist(this.state.product);
+        e.stopPropagation();
+    }
+
+    removeToCart(e) {
         this.props.removeProductToCart(this.state.product.id);
+        e.stopPropagation();
+    }
+
+    onSizeClick(e) {
+        if (e.target.nodeName === 'SPAN') {
+            let { product } = this.state;
+            product.selectedSize = e.target.innerHTML;
+
+            this.setState({
+                product
+            });
+
+            this.props.productQuantityChange(this.state.product);
+        }
+        e.stopPropagation();
     }
 
     render() {
@@ -52,14 +74,14 @@ class CartItem extends Component {
 
         let productSizesListComponent = [];
         product.availableSizes.map((size, idx) => {
-            return productSizesListComponent.push(<span className="size" key={idx}>{size}</span>);
+            return productSizesListComponent.push(<span className={"size " + (product.selectedSize === size ? 'selected' : '')} key={idx}>{size}</span>);
         });
 
         let productSizesComponent = null;
         if (product.availableSizes.length > 0) {
             productSizesComponent = <div className="available-sizes">
                 <span className="sizes-title">Available sizes</span>
-                <div className="sizes-list">
+                <div className="sizes-list" onClick={(e) => this.onSizeClick(e)}>
                     {productSizesListComponent}
                 </div>
             </div>
@@ -71,7 +93,7 @@ class CartItem extends Component {
 
         return (
             <React.Fragment>
-                <div className="cart-item">
+                <div className="cart-item" onClick={() => this.onItemClick()}>
                     <img className="pic" alt={product.pic} src={product.pic}/>
                     <div className="details">
                         <span className="title">{product.title}</span>
@@ -80,8 +102,8 @@ class CartItem extends Component {
                         { productSizesComponent }
                         { quantityCountComponent }
                         <div className="cart-details">
-                            <button className="transparent-button" onClick={() => this.addToWishlist()}>ADD TO WISHLIST</button>
-                            <button className="cart-button" onClick={() => this.removeToCart()}>REMOVE TO CART</button>
+                            <button className="transparent-button" onClick={(e) => this.addToWishlist(e)}>ADD TO WISHLIST</button>
+                            <button className="cart-button" onClick={(e) => this.removeToCart(e)}>REMOVE TO CART</button>
                         </div>
                         { freeShippingComponent }
                     </div>

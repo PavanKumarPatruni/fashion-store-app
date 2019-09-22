@@ -30,7 +30,7 @@ const Billing = ({ cart }) => {
 
           return (
             <div className="billing-ind-item" key={p.id}>
-              <span className="name">{ p.title } (x{count})</span>
+              <span className="name">{ p.title } ({p.selectedSize}) (x{count})</span>
               <Price format={p.currencyFormat} amount={price} />
             </div>
           )

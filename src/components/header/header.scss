@@ -6,6 +6,7 @@ header {
     align-items: center;
     background: linear-gradient(to right, #c04848, #480048);
     color: white;
+    z-index: 1;
 
     .header-wrapper {
         display: flex;
