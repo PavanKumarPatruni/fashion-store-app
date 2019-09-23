@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "0e2ed6fda1a226b3064ca442b728b884",
+    "revision": "727941b9ac2b5f7337b95177dfdbcdc6",
     "url": "/fashion-store-app/index.html"
   },
   {
-    "revision": "eb8b9407f88b3f05143f",
+    "revision": "863745583944c321ca6c",
     "url": "/fashion-store-app/static/css/main.f6ca852a.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/fashion-store-app/static/js/2.bcb0a7c0.chunk.js"
   },
   {
-    "revision": "eb8b9407f88b3f05143f",
-    "url": "/fashion-store-app/static/js/main.39d14823.chunk.js"
+    "revision": "863745583944c321ca6c",
+    "url": "/fashion-store-app/static/js/main.b9aca570.chunk.js"
   },
   {
     "revision": "4cd23c6d52a9eb5a6c9c",
