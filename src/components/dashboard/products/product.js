@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import { addToCart, addToWishlist } from '../../../redux/actions';
 
 import './product.scss';
-
-import history from '../../../components/history';
 
 let timeout = null;
 
@@ -63,7 +62,7 @@ class Product extends Component {
     }
 
     onItemClick() {
-        history.push('/item/'+this.state.product.id);
+        this.props.history.push('/item/'+this.state.product.id);
     }
 
     onSizeClick(e) {
@@ -144,4 +143,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Product);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Product));

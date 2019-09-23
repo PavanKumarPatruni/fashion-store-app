@@ -2,7 +2,7 @@ export const loadState = () => {
     try {
         const serializedState = localStorage.getItem('fashion-store-data');
         if (serializedState === null) {
-        return undefined;
+            return undefined;
         }
         return JSON.parse(serializedState);
     } catch (err) {
@@ -15,6 +15,6 @@ export const saveState = (state) => {
         const serializedState = JSON.stringify(state);
         localStorage.setItem('fashion-store-data', serializedState);
     } catch {
-        // ignore write errors
+        // handle errors
     }
 };

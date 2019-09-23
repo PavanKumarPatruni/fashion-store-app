@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import { removeFromWishlist, addToCart } from '../../../redux/actions';
 
 import '../wishlist.scss';
-
-import history from '../../../components/history';
 
 class WishlistItem extends Component {
     
@@ -29,7 +28,7 @@ class WishlistItem extends Component {
     }
 
     onItemClick() {
-        history.push('/item/'+this.state.product.id);
+        this.props.history.push('/item/'+this.state.product.id);
     }
 
     onSizeClick(e) {
@@ -114,4 +113,4 @@ const mapDispatchToProps = (dispatch) => {
     }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(WishlistItem);
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(WishlistItem));
